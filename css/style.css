@@ -1,0 +1,326 @@
+/* =============================== RESET ================================ */
+*, html, body {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;  
+    font-family: system-ui, -apple-system Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+
+/* ==================== GRID GERAL PAGINA PRINCIPAl ====================== */
+.container {display: grid; grid-template-areas: "h" "m" "s" "f";}
+
+/* ============================== CABEÇALHO ============================== */
+#header {
+    background-color: rgba(0, 0, 0, 0);
+    grid-area: h;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7vh;
+    padding: 20px 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+#logo {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 0;
+    cursor: default;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+nav li a {text-transform: uppercase;}
+nav li a, footer a {
+    color: white; 
+    text-decoration: none;  
+    padding: 1.5vh; 
+    transition: all 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+
+nav li a:hover, footer a:hover {border-bottom: 3px solid white;}
+
+#buttonEntrar {
+    color: white;
+    text-decoration: none;
+    border: white solid 1px;
+    border-radius: 3px;
+    padding: 5px 20px;
+    transition: all 0.3s ease;
+}
+#buttonEntrar:hover {background-color: white; color: rgb(31, 62, 102);}
+
+#buttonCadastrar {
+    color: white;
+    background-color: rgb(68, 124, 202);
+    text-decoration: none;
+    border: rgb(68, 124, 202) solid 1px;
+    border-radius: 2px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+#buttonCadastrar:hover {background-color: rgb(49, 98, 161); border-color: rgb(49, 98, 161);}
+
+#btn-mobile {
+    display: none;
+}
+
+#buttonAccount {
+    padding: 15px 0;
+}
+
+/* ============================== INÍCIO ============================== */
+#main {
+    background: url(../img/img_principal_desktop.jpg) no-repeat center center;
+    background-color: rgb(45, 86, 143);
+    background-size: cover;
+    height: 100vh;
+    width: calc(100vw - 5px);
+    grid-area: m;
+    box-shadow: 0 15px 70px rgb(41, 38, 71);
+}
+
+#div_titulo {
+    max-width: 700px;
+    margin: 35vh auto;   
+}
+
+#titulo {
+    font-family: 'playfar', 'display';
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: left;
+    color: white;
+    cursor: default;   
+}
+
+#div_titulo p {
+    color: white;
+    cursor: default;
+}
+
+/* ================================ SOBRE ================================= */
+
+/* ============================== CONTEUDO-1 ============================== */
+#sobre {
+    width: 100%;
+    height: auto;
+    grid-area: s;   
+}
+
+.grid_conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 200px 20px;
+    grid-template-areas: "sob1 img1" "img2 sob2" "sob3 img3";
+    margin: 200px 200px;
+    overflow-x: hidden; 
+}
+
+#sobre img {
+    max-width: 30vw;
+    border-radius: 10px;
+}
+
+#sobre h1 {font-size: 50px; font-family: 'playfar', 'display'; font-weight: bold; text-align: left;}
+#sobre p {font-size: 18px;  text-align: justify; text-indent: 20px;}
+
+#sobre_1 {grid-area: sob1;}
+#imagem_1 {grid-area: img1; text-align: center;}
+
+#sobre_2 {grid-area: sob2;}
+#imagem_2 {grid-area: img2; text-align: center;}
+
+#sobre_3 {grid-area: sob3;}
+#imagem_3 {grid-area: img3; text-align: center;}
+
+/* ======================= CONTEUDO-2 ======================== */
+#conteudo-2 {
+    background-color:rgb(24, 24, 32);
+    width: 100%;
+    height: 200vh;
+}
+
+/* ========================= RODAPÉ ========================== */
+footer {
+    background-color: rgb(38, 43, 61);
+    width: 100%;
+    height: auto;
+    grid-area: f;
+}
+
+footer p {
+    color: white;
+    padding: 50px;
+    cursor: default;
+}
+
+footer div {
+    background-color: rgb(24, 24, 32);
+    height: auto;
+}
+
+footer div p {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    cursor: default;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-thumb {width: 5px; background-color: rgb(24, 24, 32); border-radius: 3px;}
+
+
+/* ================================ RESPONSIVIDADE ================================== */
+
+/* ============================== RESPONSIVIDADE 700px ============================== */
+@media (max-width: 700px) {
+    /* ========================== RESPONSIVIDADE CABEÇALHO ===========================*/
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: white;
+    }
+
+    #btn-mobile:hover {
+        color: rgb(68, 134, 223);
+    }
+
+    #hamburguer {
+        display: block;
+        width: 20px;
+        border-top: 2px solid;
+    }
+
+    #hamburguer::after, #hamburguer::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .5s;
+        position: relative;
+    }
+
+    #header {
+        background-color: rgb(35, 50, 75);
+        box-shadow: 0 10px 70px rgb(27, 35, 61);
+        padding: 20px 2rem;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    #menu  {
+        display: block;
+        position: absolute;
+        height: calc(100vh - 7vh);
+        top: 7vh;
+        padding-top: 1rem;
+        right: 0;
+        background-color: rgb(35, 50, 75);
+        width: 0;
+        transition: .6s;
+        z-index: 1000;
+    }
+
+    #menu li {
+        margin-bottom: 2rem;
+        display: none;
+    }
+
+    #menu a {
+        margin: 0 1rem; 
+        border-bottom: 2px solid rgba(0, 0, 0, 0.3);  
+        display: block;
+        width: 90%;
+        text-align: center;
+    }
+
+    #menu a:hover {
+        color: rgb(68, 134, 223);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.7);  
+    }
+
+    
+
+    #nav.active #hamburguer {
+        border: none;
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #menu {
+        width: 50%;
+        position: fixed;
+    }
+
+    #nav.active #menu li {
+        display: block;
+    }
+
+    /* ========================== RESPONSIVIDADE MAIN ===========================*/
+    #main {
+        background: url(../img/img_principal_mobile.jpg) no-repeat center center;
+        width: 100%;
+        height: 60vh;
+    }
+
+    #div_titulo {
+        width: 400px;
+        margin: 25vh auto;
+    }
+
+    #div_titulo h1 {
+        font-size: 30px;
+    }
+
+    /* ======================== RESPONSIVIDADE SECTION ========================== */
+    .grid_conteudo {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        grid-template-areas: "sob1""img1" "sob2""img2" "sob3""img3";
+        margin: 100px 30px; 
+    }
+    
+    #sobre img {
+        max-width: 60vw;
+        border-radius: 10px;
+    }
+    
+    #sobre h1 {font-size: 22px;}
+    #sobre p {font-size: 12px;}
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {width: 0;}
+    ::-webkit-scrollbar-thumb {width: 0;}
+}
+
+@media (min-width: 1920px) {
+}
