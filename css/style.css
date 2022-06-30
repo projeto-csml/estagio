@@ -18,7 +18,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 7vh;
+    height: 9vh;
     padding: 20px 5rem;
     display: flex;
     justify-content: space-between;
@@ -27,11 +27,9 @@
 }
 
 #logo {
-    color: white;
-    font-size: 24px;
-    text-transform: uppercase;
-    padding: 0;
-    cursor: default;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 #menu {
@@ -45,7 +43,7 @@ nav li a, footer a {
     color: white; 
     text-decoration: none;  
     padding: 1.5vh; 
-    transition: all 0.3s ease-in-out;
+    transition: 0.3s;
     border-bottom: 3px solid transparent;
 }
 
@@ -147,10 +145,104 @@ nav li a:hover, footer a:hover {border-bottom: 3px solid white;}
 #imagem_3 {grid-area: img3; text-align: center;}
 
 /* ======================= CONTEUDO-2 ======================== */
-#conteudo-2 {
-    background-color:rgb(24, 24, 32);
+#cont-1 {
+    background-color:rgb(45, 86, 143);
     width: 100%;
-    height: 200vh;
+    height: auto;
+    display: flex;
+    padding: 100px 0;
+    gap: 50px;
+    justify-content: center;
+}
+
+#cont-1 p {
+    max-width: 40vw;
+    color: white;
+}
+
+#cont-2 {
+    padding: 200px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cont-2 #dec1 {
+    background-color: rgb(45, 86, 143);
+    height: 90vh;
+    width: 100px;
+    border-radius: 0 100px 100px 0;
+}
+
+#cont-2 p {
+    width: 40%;
+    text-align: center;
+}
+
+#cont-2 #dec2 {
+    background-color: rgb(45, 86, 143);
+    height: 90vh;
+    width: 100px;
+    border-radius: 100px 0 0 100px;
+}
+
+/* =========================== CONTEUDO-3 ==========================*/
+#tit_cont3 {
+    text-align: center; 
+    font-size: 2em; 
+    font-weight: bold;
+}
+
+#cont-3 {
+    background-color: rgb(45, 86, 143);
+    padding: 50px 0;
+    margin-bottom: 200px;
+}
+
+#imagens_cont-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#cont-3 img {
+    width: 15vw;
+    transition: .3s;
+}
+
+#cont-3 img:hover {
+    transform: scale(1.1);
+}
+
+#cont-3 #dec1 {
+    background-color: rgb(27, 35, 61);
+    width: 200px;
+    height: 100px;
+    margin-top: -100px;
+    left: 0;
+    position: absolute;
+}
+
+#cont-3 #dec2 {
+    background-color: rgb(27, 35, 61);
+    width: 200px;
+    height: 100px;
+    margin-bottom: -100px;
+    right: 0;
+    position: absolute;
+}
+
+/* ============================= CONTEUDO-4 =========================== */
+#cont-4 {
+    padding: 50px 200px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#text_cont4 {
+    font-size: 2em;
 }
 
 /* ========================= RODAPÉ ========================== */
@@ -224,6 +316,7 @@ footer div p {
     #header {
         background-color: rgb(35, 50, 75);
         box-shadow: 0 10px 70px rgb(27, 35, 61);
+        height: 7vh;
         padding: 20px 2rem;
         position: fixed;
         z-index: 1000;
@@ -232,7 +325,7 @@ footer div p {
     #menu  {
         display: block;
         position: absolute;
-        height: calc(100vh - 7vh);
+        height: calc(150vh - 7vh);
         top: 7vh;
         padding-top: 1rem;
         right: 0;
@@ -259,9 +352,7 @@ footer div p {
         color: rgb(68, 134, 223);
         border-bottom: 2px solid rgba(0, 0, 0, 0.7);  
     }
-
     
-
     #nav.active #hamburguer {
         border: none;
     }
@@ -310,12 +401,68 @@ footer div p {
     }
     
     #sobre img {
-        max-width: 60vw;
+        max-width: 55vw;
         border-radius: 10px;
     }
     
-    #sobre h1 {font-size: 22px;}
-    #sobre p {font-size: 12px;}
+    #sobre h1 {font-size: 24px;}
+    #sobre p {font-size: 14px;}
+
+    /* ======================= RESPONSIVIDADE CONTEUDO-2 ======================== */
+    #cont-1 {
+        padding: 50px 0;
+        flex-direction: column;
+    }
+
+    #cont-1 img {
+        height: 40vh;
+        margin: auto;
+    }
+
+    #cont-1 p {
+        margin: 0 20px;
+        max-width: 90vw;
+        color: white;
+    }
+
+    #cont-2 #dec1, #dec2 {
+        display: none;
+    }
+
+    #cont-2 p {
+        margin: auto;
+        width: 90vw;
+        text-align: center;
+    }
+
+    /* =========================== CONTEUDO-3 ==========================*/
+    #tit_cont3 {
+        font-size: 14px;
+    }
+    
+    #imagens_cont-3 {
+        flex-direction: column;
+    }
+
+    #cont-3 img {
+        width: 90vw;
+    }
+
+    #cont-3 #dec1, #dec2 {
+        display: none;
+    }
+
+    /* ============================= CONTEUDO-4 =========================== */
+    #cont-4 {
+        padding: 50px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #text_cont4 {
+        font-size: 20px;
+    }
+
 
     /* SCROLLBAR */
     ::-webkit-scrollbar {width: 0;}
