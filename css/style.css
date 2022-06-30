@@ -415,7 +415,7 @@ footer div p {
     }
 
     #cont-1 img {
-        height: 40vh;
+        width: 90vw;
         margin: auto;
     }
 
@@ -435,7 +435,7 @@ footer div p {
         text-align: center;
     }
 
-    /* =========================== CONTEUDO-3 ==========================*/
+    /* =========================== RESPONSIVIDADE CONTEUDO-3 ==========================*/
     #tit_cont3 {
         font-size: 14px;
     }
@@ -452,7 +452,7 @@ footer div p {
         display: none;
     }
 
-    /* ============================= CONTEUDO-4 =========================== */
+    /* ============================= RESPONSIVIDADE CONTEUDO-4 =========================== */
     #cont-4 {
         padding: 50px 20px;
         flex-direction: column;
@@ -463,6 +463,9 @@ footer div p {
         font-size: 20px;
     }
 
+    /* ============================= RESPONSIVIDADE TELA DE LOGING 
+    INCOMPLETO =========================== */
+
 
     /* SCROLLBAR */
     ::-webkit-scrollbar {width: 0;}
@@ -471,3 +474,129 @@ footer div p {
 
 @media (min-width: 1920px) {
 }
+
+/* ======================================================= TELA DE LOGIN ========================================================= */
+#body_form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 124, 202);
+}
+
+.main_form {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(123, 169, 230);
+    padding: 1rem;
+    border-radius: 10px 0 0 10px;
+}
+
+.form-image img {
+    width: 31rem;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem;
+    border-radius:0 10px 10px 0;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button a {
+    color: white;
+    background-color: rgb(68, 124, 202);
+    text-decoration: none;
+    border: rgb(68, 124, 202) solid 1px;
+    border-radius: 2px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.login-button a:hover {background-color: rgb(49, 98, 161); border-color: rgb(49, 98, 161);}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem; 
+    background-color: rgb(68, 124, 202);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+    transition: .3s;
+}
+
+.input-box input:hover {
+    transform: scale(1.1);
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid rgb(68, 124, 202);
+}
+
+.input-box label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: black;
+}
+
+.continue-button a {
+    width: 100%;
+    margin-top: 2.5rem;
+    color: white;
+    background-color: rgb(68, 124, 202);
+    text-decoration: none;
+    border: rgb(68, 124, 202) solid 1px;
+    border-radius: 2px; 
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.continue-button a:hover {background-color: rgb(49, 98, 161); border-color: rgb(49, 98, 161);}
