@@ -175,8 +175,9 @@ nav li a:hover, footer a:hover {border-bottom: 3px solid white;}
 }
 
 #cont-2 p {
-    width: 40%;
+    width: 50%;
     text-align: center;
+    font-size: 1.3em;
 }
 
 #cont-2 #dec2 {
@@ -241,8 +242,8 @@ nav li a:hover, footer a:hover {border-bottom: 3px solid white;}
     gap: 50px;
 }
 
-#text_cont4 {
-    font-size: 2em;
+#text_cont4 p {
+    font-size: 2.5em;
 }
 
 /* ========================= RODAPÉ ========================== */
@@ -270,11 +271,6 @@ footer div p {
     text-align: center;
     cursor: default;
 }
-
-/* SCROLLBAR */
-::-webkit-scrollbar {width: 5px;}
-::-webkit-scrollbar-thumb {width: 5px; background-color: rgb(24, 24, 32); border-radius: 3px;}
-
 
 /* ================================ RESPONSIVIDADE ================================== */
 
@@ -600,3 +596,7 @@ footer div p {
 }
 
 .continue-button a:hover {background-color: rgb(49, 98, 161); border-color: rgb(49, 98, 161);}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-thumb {width: 5px; background-color: rgb(24, 24, 32); border-radius: 3px;}
