@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ### MY CSS ### -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ### BOOTSTRAP CSS ### -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+
+    <!-- ### ANIMATE CSS ### -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- ### ICONE DO SITE ### -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- ### TÍTULO DOCUMENTO ### -->
+    <title>Machine Learning! Venha conhecer essa maravilha da tecnologia</title>
+</head>
+<body>
+    <div class="body-container">
+        <header id="header">
+            <div id="logo">
+                <img src="img/img_logo.png" alt="Imagem Logo">
+                <img src="img/titulo_logo.png" alt="Titulo Logo">
+            </div>
+            
+            <nav id="nav">
+                <button id="btn-mobile">
+                    <span id="hamburguer"></span>
+                </button>
+                <ul id="menu">
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main id="main" style="height: 60vh;">
+            <div>
+                <h1 class="tit">USOS DO ML</h1>
+            </div>
+        </main>
+
+        <div class="conteudo-cards" id="sobre">
+            <h1 class="text-center">RECONHECIMENTO DE FALA</h1>
+            <p>
+                também é conhecido como reconhecimento automático de fala (ASR), reconhecimento de fala por computador ou fala para texto, e é um recurso que usa o processamento de linguagem natural (PNL) para processar a fala humana em um formato escrito. Muitos dispositivos móveis incorporam reconhecimento de voz em seus sistemas para realizar pesquisas por voz, por exemplo, Siri, ou fornecer mais acessibilidade para mensagens de texto.
+            </p>
+
+            <h1 class="text-center">ATENDIMENTO AO CLIENTE</h1>
+            <p>
+                os robôs de chat on-line estão substituindo os agentes humanos ao longo da jornada do cliente. Eles respondem às perguntas mais frequentes (FAQs) sobre tópicos, como envio, ou fornecem aconselhamento personalizado, venda cruzada de produtos ou sugestões de tamanhos para os usuários, mudando a maneira como pensamos sobre o envolvimento do cliente em sites e plataformas de mídia social. Os exemplos incluem robôs de sistema de mensagens em sites de comércio eletrônico com agentes virtuais, aplicativos de mensagens, como Slack e Facebook Messenger, e tarefas geralmente realizadas por assistentes virtuais e assistentes de voz.
+            </p>
+
+            <h1 class="text-center">VISÃO COMPUTACIONAL</h1>
+            <p>
+                esta tecnologia de IA permite que computadores e sistemas derivem informações significativas de imagens digitais, vídeos e outras entradas visuais e, com base nessas entradas, ela pode agir. Essa capacidade de fornecer recomendações o distingue das tarefas de reconhecimento de imagem. Impulsionada por redes neurais convolucionais, a visão computacional tem aplicações na marcação de fotos nas mídias sociais, imagens radiológicas na assistência médica e carros autônomos no mercado automotivo.
+            </p>
+
+            <h1 class="text-center">MECANISMOS DE RECOMENDAÇÃO</h1>
+            <p>
+                usando dados de comportamento de consumo anterior, os algoritmos de IA podem ajudar a descobrir tendências de dados que podem ser usados para desenvolver estratégias de vendas cruzadas mais eficazes. Isso é usado para fazer recomendações complementares relevantes aos clientes durante o processo de finalização da compra para varejistas on-line.<br><br>
+
+                Negociação de ações automatizada: projetadas para otimizar carteiras de ações, as plataformas de negociação de alta frequência orientadas por IA fazem milhares ou até milhões de negociações por dia sem intervenção humana.
+            </p>
+        </div>
+        
+        <footer id="contato">
+            <div class="flex-footer">
+                <div>
+                    <img src="img/logo.png">
+                </div>
+
+                <div class="flex-content">
+                    <div class="footer-links">
+                        <h1>GUIA DE NAVEGAÇÃO</h1>
+
+                        <li><a href="#header">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a class="activate" href="#contato">Contato</a></li>
+                    </div>
+
+                    <div class="footer-devs">
+                        <h1>DESENVOLVEDORES</h1>
+
+                        <p>Rodrigo Santos </p>
+                        <p>Luis Felipe de Barros </p>
+                        <p>Mateus Martins</p>
+                        <p>João Felipe Nascimento</p>
+                        <p>Kalebe Gadioli</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contato">
+                <p>Copyright&copy <a href="home.html">csml.github.io</a></p>
+            </div>
+        </footer>
+    </div>
+    
+    
+    <!-- ### JAVASCRIPT ### -->
+    <script src="javascript/script.js"></script>
+    
+    <!-- ### JAVASCRIPT WOW ### -->
+    <script src="javascript/wow.min.js"></script>
+    <script>
+        wow = new WOW({animateClass: 'animated', offset: 100});
+        wow.init();
+    </script>
+</body>
+</html>

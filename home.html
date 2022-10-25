@@ -4,20 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- ### FONTES PERSONALIZADAS ### -->
-        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E>
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-
-                
+    
         <!-- ### MY CSS ### -->
         <link rel="stylesheet" href="css/style.css">
 
+        <!-- ### BOOTSTRAP CSS ### -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+    
         <!-- ### ANIMATE CSS ### -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
@@ -25,10 +19,10 @@
         <link rel="shortcut icon" href="img/favicon.png">
 
         <!-- ### TÍTULO DOCUMENTO ### -->
-        <title>Projeto Estágio!</title>
+        <title>Machine Learning! Venha conhecer essa maravilha da tecnologia</title>
     </head>
     <body>
-        <div class="container">
+        <div class="body-container">
             <header id="header">
                 <div id="logo">
                     <img src="img/img_logo.png" alt="Imagem Logo">
@@ -40,8 +34,8 @@
                         <span id="hamburguer"></span>
                     </button>
                     <ul id="menu">
+                        <li><a class="activate" href="home.html">Início</a></li>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="home.html">Tópico</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
@@ -50,7 +44,7 @@
             <main id="main">
                 <div id="div_titulo">
                     <h1 id="titulo" class="animate__animated animate__fadeInDown">Machine Learning, um novo passo na tecnologia!</h1>
-                    <hr style="background: rgb(251, 215, 132); border: 1px solid rgb(251, 215, 132); border-radius: 1px; width: 100px; margin: 10px 0;">
+                    <hr style="background: rgb(251, 215, 132); opacity: 1; border: 1px solid rgb(251, 215, 132); border-radius: 1px; width: 100px; margin: 10px 0;">
 
                     <div id="buttonAccount">
                         <a id="buttonEntrar" href="">Entrar</a>
@@ -65,6 +59,7 @@
                 <div id="conteudo-1">
                     <div class="grid_conteudo">
                         <div id="sobre_1" class="animate__animated animate__fadeInLeft wow">
+                            <img width="50%" src="img/dec_01.png">
                             <h1 style="cursor: default;">O que é Machine Learning?</h1><br>
                             <p style="cursor: default;">
                                 Machine Learning é uma tecnologia onde os computadores conseguem aprender de acordo com as respostas esperadas, e por meio de associações de diferentes dados, que podem ser imagens, números e tudo que seja possível dessa tecnologia identificar. Quando se desenvolve um sistema de aprendizado de máquina, a estrutura utilizada na programação é diferente da programação de software tradicional. Os algorítmos de machine learning são criados a partir dos dados que serão analisados e as respostas que se esperam dessa análise, no final do processo o sistema cria as próprias regras ou perguntas.
@@ -77,6 +72,7 @@
 
                         
                         <div id="sobre_2" class="animate__animated animate__fadeInRight wow">
+                            <img width="50%" src="img/dec_02.png">
                             <h1 style="cursor: default;">Evolução da Machine Learning</h1><br>
                             <p style="cursor: default;">
                                 Apesar de estarmos falando de um conceito relativamente novo, a origem do Machine Learning já tem quase 70 anos. Na década de 1950, quando os primeiros modelos de computadores eram desenvolvidos, Alan Turing, considerado o precursor da informática, começou a realizar os primeiros testes para analisar o poder de raciocínio das máquinas. Não era nada muito elaborado, mas, para a época, observar os computadores repetindo sequências de comandos já era algo impressionante. Um pouco mais tarde, um cientista de computação norte-americano chamado Arthur L. Samuel foi além e criou o primeiro software com capacidade de aprender.
@@ -88,6 +84,7 @@
                         </div>
 
                         <div id="sobre_3" class="animate__animated animate__fadeInLeft wow">
+                            <img width="50%" src="img/dec_03.png">
                             <h1 style="cursor: default;">Machine Learning e IA</h1><br>
                             <p style="cursor: default;">
                                 Muita gente pensa que machine learning e inteligência artificial significam a mesma coisa, mas não é bem assim. Na verdade, a inteligência artificial é um conceito amplo que inclui o aprendizado de máquina como um dos seus recursos. Machine learning também é um conceito com várias definições possíveis. Aqui vai uma que nos permite assimilar bem sua essência: aprendizado de máquina é um sistema que pode modificar seu comportamento autonomamente tendo como base a sua própria experiência. A interferência humana aqui é mínima.
@@ -100,20 +97,10 @@
                     </div>
                 </div>
 
-                <div id="conteudo-2">
-                    
-                    <!-- <div id="cont-2">
-                        <div id="dec1" class="animate__animated animate__fadeInLeft wow"></div>
-                        <p>
-                            A tecnologia Machine Learning permite que os modelos sejam treinados em conjuntos de dados antes de serem implementados. Um aplicativo ou software com Machine Learning é um tipo de programa que melhora automaticamente e gradualmente com o número de experiências em que ele é colocado para treinar.
-                            Nessa primeira etapa o treinamento é assistido. O processo iterativo leva à uma melhoria nos tipos de associações feitas entre elementos e dados, os quais são apresentados em uma grande quantidade. Devido a essa grande quantidade de dados que serão analisados, os padrões e associações feitas somente por observação humana poderiam resultar ineficientes, em caso de que sejam feitas sem um suporte das tecnologias Machine Learning. Após o treinamento incial de um aplicativo ou software de Machine Learning ele poderá ser usado em tempo real para aprender sozinho com os dados apresentando maior precisão nos resultados com o passar do tempo.
-                        </p>
-                        <div id="dec2" class="animate__animated animate__fadeInRight wow"></div>
-                    </div> -->
-
+                <div id="box-cards">
                     <h2 id="tit_cont3">EMPRESAS QUE UTILIZAM MACHINE LEARNING</h2>
                     <div id="cont-3">
-                        <div id="dec1" class="animate__animated animate__slideInLeft wow"></div>
+                        <div id="dec1"></div>
                         <div id="imagens_cont-3">
                             <a href="https://www.netflix.com/" target="_blanck"><img src="img/netflix_dec.jpg" alt=""></a>
 
@@ -121,22 +108,100 @@
 
                             <a href="https://www.google.com/" target="_blanck"><img src="img/google_dec.jpg" alt=""></a>
                         </div>
-                        <div id="dec2" class="animate__animated animate__slideInRight wow"></div>
+                        <div id="dec2"></div>
+                    </div>
+                </div>
+
+                <div id="conteudo-2">
+                    <div class="card-container">
+                        <div class="flex-card">
+                            <a href="tipos.html">
+                                <div class="card-item">
+                                    <div class="card-img">
+                                        <img src="img/card_01.png">
+                                    </div>
+
+                                    <div class="card-content">
+                                        <h1>TIPOS DE ML</h1>
+
+                                        <p>Assim como acontece com os seres humanos, as máquinas também possuem diferentes formas de aprendizado.</p>
+                                    </div>
+
+                                    <div class="card-readmore">
+                                        <p>Ler Mais</p>
+                                    </div>
+                                </div>
+                            </a>    
+
+                            <a href="desafios.html">
+                                <div class="card-item">
+                                    <div class="card-img">
+                                        <img src="img/card_02.png">
+                                    </div>
+
+                                    <div class="card-content">
+                                        <h1>DESAFIOS DO ML</h1>
+
+                                        <p>A implementação nas empresas levantou preocupações éticas em torno das IA.</p>
+                                    </div>
+
+                                    <div class="card-readmore">
+                                        <p>Ler Mais</p>
+                                    </div>
+                                </div>
+                            </a>    
+
+                            <a href="uso.html">
+                                <div class="card-item">
+                                    <div class="card-img">
+                                        <img src="img/card_03.png">
+                                    </div>
+
+                                    <div class="card-content">
+                                        <h1>CASOS DE USO</h1>
+
+                                        <p>Aqui estão apenas alguns exemplos de machine learning que talvez você encontre todos os dias</p>
+                                    </div>
+
+                                    <div class="card-readmore">
+                                        <p>Ler Mais</p>
+                                    </div>
+                                </div>
+                            </a>    
+                        </div>
                     </div>
                 </div>
             </section>
             
             <footer id="contato">
-                <p style="text-align: center;">
-                    DEVS <br>
-                    Rodrigo R Santos <br>
-                    Luis Felipe Barros <br>
-                    Mateus Martins <br>
-                    Kalebe Gadioli <br>   
-                    João Felipe Nascimento
-                </p>
-                <div>
-                    <p>Copyright&copy <a href="home.html">Página Inicial</a></p>
+                <div class="flex-footer">
+                    <div>
+                        <img src="img/logo.png">
+                    </div>
+
+                    <div class="flex-content">
+                        <div class="footer-links">
+                            <h1>GUIA DE NAVEGAÇÃO</h1>
+
+                            <li><a href="#header">Início</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a class="activate" href="#contato">Contato</a></li>
+                        </div>
+
+                        <div class="footer-devs">
+                            <h1>DESENVOLVEDORES</h1>
+
+                            <p>Rodrigo Santos </p>
+                            <p>Luis Felipe de Barros </p>
+                            <p>Mateus Martins</p>
+                            <p>João Felipe Nascimento</p>
+                            <p>Kalebe Gadioli</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contato">
+                    <p>Copyright&copy <a href="home.html">csml.github.io</a></p>
                 </div>
             </footer>
         </div>

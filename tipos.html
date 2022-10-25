@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ### MY CSS ### -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ### BOOTSTRAP CSS ### -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+
+    <!-- ### ANIMATE CSS ### -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- ### ICONE DO SITE ### -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <!-- ### TÍTULO DOCUMENTO ### -->
+    <title>Machine Learning! Venha conhecer essa maravilha da tecnologia</title>
+</head>
+<body>
+    <div class="body-container">
+        <header id="header">
+            <div id="logo">
+                <img src="img/img_logo.png" alt="Imagem Logo">
+                <img src="img/titulo_logo.png" alt="Titulo Logo">
+            </div>
+            
+            <nav id="nav">
+                <button id="btn-mobile">
+                    <span id="hamburguer"></span>
+                </button>
+                <ul id="menu">
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main id="main" style="height: 60vh;">
+            <div>
+                <h1 class="tit">TIPOS DE ML</h1>
+            </div>
+        </main>
+
+        <div class="conteudo-cards" id="sobre">
+            <h1 class="text-center">Aprendizado Supervisionado</h1>
+            <p>
+                É um modelo em que a máquina recebe um conjunto de dados com rótulos, divididos em diferentes classificações. O aprendizado supervisionado é muito usado para antecipar resultados em que já se tem uma ideia de quais são as possibilidades de desfecho, casos de sim ou não, principalmente.<br><br>
+                Para verificar se uma transação feita por cartão de crédito é fruto de uma fraude ou não, por exemplo. Isso é possível graças às técnicas de classificação e de regressão aplicadas nesse tipo de método de ensino.<br><br>
+                Classificação: consegue categorizar um dado a partir dos rótulos aprendidos. Por exemplo, um algoritmo já sabe quais são os tipos de cores primárias e secundárias, portanto, quando aparecer algum elemento em vermelho, vai ser colocado entre as cores primárias.<br><br>
+                Regressão: serve para prever valores contínuos, ou seja, variáveis que tendem a se repetir dentro de uma lógica durante um determinado intervalo de tempo. Por exemplo, o cálculo de rendimentos para investimentos de taxas pré-fixadas.
+            </p>
+
+            <h1 class="text-center">Aprendizado Não Supervisionado</h1>
+            <p>
+                É um modelo em que a máquina recebe uma série de dados que não possuem rótulos e, portanto, não há qualquer perspectiva de se prever o resultado final. Nesses casos, nem os humanos sabem quais informações poderão ser extraídas.<br><br>
+                A ideia nesse tipo de aprendizado é justamente reconhecer determinados padrões e, a partir deles, encontrar uma lógica entre os dados. Nesse sentido, o aprendizado não supervisionado utiliza basicamente três técnicas para identificar essas possíveis relações entre as informações:<br><br>
+                Agrupamento:  busca similaridade entre os dados e os divide em grupos assim que encontra essas semelhanças. Ele pode ser usado, por exemplo, para segmentar o seu público-alvo e favorecer a criação de personas.<br><br>
+                Associação: combina dois ou mais dados, encontrando uma sequência e identificando padrões. É o caso das recomendações de conteúdo ou das sugestões de compras, entre outros.<br><br>
+                Redução de dimensão: ajuda a eliminar dados aleatórios, fazendo prevalecer somente aquelas variáveis mais consistentes. Pode ser usado em planos de gerenciamento de riscos, por exemplo, ao reduzir resultados menos prováveis.
+            </p>
+
+            <h1 class="text-center">Aprendizado semissupervisionado</h1>
+            <p>
+                Conforme o nome sugere, é um modelo que funciona como um híbrido dos dois anteriores. Normalmente, ele é utilizado quando há grande volume de dados, mas apenas parte dele possui rótulos, que é a condição que possibilita um aprendizado totalmente supervisionado. Nesse caso, a máquina e seus algoritmos aprendem tanto a partir de dados supervisionados quanto de não supervisionados.<br><br>
+                Em termos práticos, esse método pode ser utilizado para fazer o reconhecimento facial de uma pessoa por uma webcam ou pela câmera do smartphone, entre outras aplicações.
+            </p>
+
+            <h1 class="text-center">Aprendizado Por Reforço</h1>
+            <p>
+                É um método no qual a máquina aprende através do sistema de tentativas, por erro e acerto. De certa forma, lembra o sistema de recompensas, utilizado na psicologia infantil, para premiar a criança que realiza um comportamento desejado.<br><br>
+                No caso do aprendizado da máquina, esse modelo desconsidera um pouco o valor dos dados (rotulados ou não rotulados), e valoriza mais o ambiente. Nesse modelo, existem sempre três variáveis: o agente (a máquina), o meio (lugar onde o agente atua) e as ações (atividades do agente).<br><br>
+                Pense no problema como um grande jogo de quebra-cabeças em que é preciso combinar todas as peças corretamente. Sendo assim, a cada peça combinada, a máquina faz um ponto, e a cada associação errada, ela perde.<br><br>       
+                Ou seja, ela vai aprendendo ao reforçar uma ação, seja ela positiva (acerto) ou negativa (erro), em busca do objetivo final, que é encontrar a melhor estratégia no menor tempo.
+            </p>
+        </div>
+        
+        <footer id="contato">
+            <div class="flex-footer">
+                <div>
+                    <img src="img/logo.png">
+                </div>
+
+                <div class="flex-content">
+                    <div class="footer-links">
+                        <h1>GUIA DE NAVEGAÇÃO</h1>
+
+                        <li><a href="#header">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a class="activate" href="#contato">Contato</a></li>
+                    </div>
+
+                    <div class="footer-devs">
+                        <h1>DESENVOLVEDORES</h1>
+
+                        <p>Rodrigo Santos </p>
+                        <p>Luis Felipe de Barros </p>
+                        <p>Mateus Martins</p>
+                        <p>João Felipe Nascimento</p>
+                        <p>Kalebe Gadioli</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contato">
+                <p>Copyright&copy <a href="home.html">csml.github.io</a></p>
+            </div>
+        </footer>
+    </div>
+    
+    
+    <!-- ### JAVASCRIPT ### -->
+    <script src="javascript/script.js"></script>
+    
+    <!-- ### JAVASCRIPT WOW ### -->
+    <script src="javascript/wow.min.js"></script>
+    <script>
+        wow = new WOW({animateClass: 'animated', offset: 100});
+        wow.init();
+    </script>
+</body>
+</html>

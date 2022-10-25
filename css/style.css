@@ -1,15 +1,21 @@
 /* =============================== RESET ================================ */
-*, html, body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;  
-    font-family: system-ui, -apple-system Helvetica, Arial, sans-serif;
-    font-weight: 500;
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
 /* ==================== GRID GERAL PAGINA PRINCIPAl ====================== */
-.container {display: grid; grid-template-areas: "h" "m" "s" "f";}
+.body-container {display: grid; grid-template-areas: "h" "m" "s" "f";}
 
 /* ============================== CABEÇALHO ============================== */
 #header {
@@ -18,8 +24,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 9vh;
-    padding: 20px 5rem;
+    height: auto;
+    padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,15 +45,25 @@
 }
 
 nav li a {text-transform: uppercase;}
-nav li a, footer a {
+nav li a {
     color: white; 
+    font-weight: bold;
     text-decoration: none;  
-    padding: 1.5vh; 
+    padding: 10px 20px; 
     transition: 0.3s;
     border-bottom: 3px solid transparent;
 }
 
-nav li a:hover, footer a:hover {border-bottom: 3px solid white;}
+a.activate {
+    border-bottom: 3px solid white;
+    cursor: default;
+}
+a.activate:hover {
+    color: white;
+    opacity: 1;
+}
+
+nav li a:hover {color: white; border-bottom: 3px solid white;}
 
 #buttonEntrar {
     color: white;
@@ -87,11 +103,13 @@ nav li a:hover, footer a:hover {border-bottom: 3px solid white;}
     width: calc(100vw - 5px);
     grid-area: m;
     box-shadow: 0 15px 70px rgb(41, 38, 71);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #div_titulo {
-    max-width: 700px;
-    margin: 35vh auto;   
+    width: 700px;
 }
 
 #titulo {
@@ -123,7 +141,8 @@ nav li a:hover, footer a:hover {border-bottom: 3px solid white;}
     grid-template-rows: auto auto auto;
     grid-gap: 200px 20px;
     grid-template-areas: "sob1 img1" "img2 sob2" "sob3 img3";
-    margin: 200px 200px;
+    align-items: flex-start;
+    margin: 100px 200px;
     overflow-x: hidden; 
 }
 
@@ -132,10 +151,10 @@ nav li a:hover, footer a:hover {border-bottom: 3px solid white;}
     border-radius: 10px;
 }
 
-#sobre h1 {font-size: 50px; font-family: 'playfar', 'display'; font-weight: bold; text-align: left;}
-#sobre p {font-size: 18px;  text-align: justify; text-indent: 20px;}
+#sobre #conteudo-1 h1 {font-size: 50px; font-family: 'playfar', 'display'; font-weight: bold; text-align: left;}
+#sobre #conteudo-1 p {font-size: 18px;  text-align: justify; text-indent: 20px;}
 
-#sobre_1 {grid-area: sob1;}
+#sobre_1 {grid-area: sob1; position: relative;}
 #imagem_1 {grid-area: img1; text-align: center;}
 
 #sobre_2 {grid-area: sob2;}
@@ -160,31 +179,78 @@ nav li a:hover, footer a:hover {border-bottom: 3px solid white;}
     color: white;
 }
 
-#cont-2 {
-    padding: 200px 0;
+.card-container {
+    width: 100%;
+    height: auto;
+}
+
+.card-container a {
+    text-decoration: none;
+}
+
+.flex-card {
+    padding: 100px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 
-#cont-2 #dec1 {
-    background-color: rgb(45, 86, 143);
-    height: 90vh;
-    width: 100px;
-    border-radius: 0 100px 100px 0;
+.card-item {
+    border-radius: 10px;
+    background-image: linear-gradient(#435B7D, #00184D);
+    width: 100%;
+    min-width: 200px;
+    max-width: 300px;
+    height: 450px;
+    transition: .3s;
 }
 
-#cont-2 p {
-    width: 50%;
+.card-item:hover {
+    transform: scale(1.05);
+}
+
+.card-img {
+    height: 45%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img img {
+    width: 30%;
+}
+
+.card-content {
+    height: 45%;
+    padding: 20px;
     text-align: center;
-    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-#cont-2 #dec2 {
-    background-color: rgb(45, 86, 143);
-    height: 90vh;
-    width: 100px;
-    border-radius: 100px 0 0 100px;
+.card-content h1 {
+    color: white;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.card-content p {
+    color: white;
+    font-size: 1em;
+}
+
+.card-readmore {
+    background-color: #435B7D;
+    border-radius: 0px 0px 10px 10px;
+    color: white;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* =========================== CONTEUDO-3 ==========================*/
@@ -194,21 +260,26 @@ nav li a:hover, footer a:hover {border-bottom: 3px solid white;}
     font-weight: bold;
 }
 
+#box-cards {
+    padding: 100px 0;
+}
+
 #cont-3 {
     background-color: rgb(45, 86, 143);
     padding: 50px 0;
-    margin-bottom: 200px;
 }
 
 #imagens_cont-3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 50px;
 }
 
 #cont-3 img {
     width: 15vw;
+    min-width: 200px;
     transition: .3s;
 }
 
@@ -242,26 +313,93 @@ footer {
     grid-area: f;
 }
 
+footer img {
+    width: 80%;
+}
+
+footer .flex-footer {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    opacity: .5;
+}
+
+footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .footer-devs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer li {
+    list-style: none;
+}
+
 footer p {
     color: white;
-    padding: 50px;
     cursor: default;
 }
 
-footer div {
+footer h1 {
+    color: white;
+    font-size: 1.7em;
+}
+
+footer .flex-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+footer .contato {
     background-color: rgb(24, 24, 32);
     height: auto;
 }
 
-footer div p {
+footer .contato p {
     color: white;
     padding: 20px;
     text-align: center;
     cursor: default;
 }
 
-/* ================================ RESPONSIVIDADE ================================== */
+.tit {
+    color: white; 
+    font-size: 4em; 
+    font-family: 'playfar', 'display';
+}
 
+.conteudo-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 100px;
+}
+
+
+/* ================================ RESPONSIVIDADE ================================== */
+@media (max-width: 1200px) {
+    .grid_conteudo {
+        margin: 100px;
+    }
+}
 /* ============================== RESPONSIVIDADE 700px ============================== */
 @media (max-width: 700px) {
     /* ========================== RESPONSIVIDADE CABEÇALHO ===========================*/
@@ -311,24 +449,23 @@ footer div p {
         position: absolute;
         height: calc(150vh - 7vh);
         top: 7vh;
-        padding-top: 1rem;
+        padding: 16px 20px;
         right: 0;
         background-color: rgb(35, 50, 75);
-        width: 0;
+        width: 100vw;
+        transform: translateX(100%);
         transition: .6s;
         z-index: 1000;
     }
 
     #menu li {
         margin-bottom: 2rem;
-        display: none;
     }
 
     #menu a {
-        margin: 0 1rem; 
         border-bottom: 2px solid rgba(0, 0, 0, 0.3);  
         display: block;
-        width: 90%;
+        width: 100%;
         text-align: center;
     }
 
@@ -351,19 +488,16 @@ footer div p {
     }
 
     #nav.active #menu {
-        width: 70%;
         position: fixed;
-    }
-
-    #nav.active #menu li {
-        display: block;
+        transform: translateX(0);
     }
 
     /* ========================== RESPONSIVIDADE MAIN ===========================*/
     #main {
         background: url(../img/img_principal_mobile.jpg) no-repeat center center;
-        width: 100%;
+        width: calc(100% -40px);
         height: 60vh;
+        padding: 20px;
     }
 
     #div_titulo {
@@ -389,62 +523,52 @@ footer div p {
         border-radius: 10px;
     }
     
-    #sobre h1 {font-size: 24px;}
-    #sobre p {font-size: 14px;}
+    #sobre #conteudo-1 h1 {font-size: 24px;}
+    #sobre #conteudo-1 p {font-size: 14px;}
 
-    /* ======================= RESPONSIVIDADE CONTEUDO-2 ======================== */
-    #cont-1 {
-        padding: 50px 0;
-        flex-direction: column;
-    }
-
-    #cont-1 img {
-        width: 90vw;
-        margin: auto;
-    }
-
-    #cont-1 p {
-        margin: 0 20px;
-        max-width: 90vw;
-        color: white;
-    }
-
-    #cont-2 #dec1, #dec2 {
-        display: none;
-    }
-
-    #cont-2 p {
-        margin: auto;
-        width: 90vw;
-        text-align: center;
-    }
-
-    /* =========================== RESPONSIVIDADE CONTEUDO-3 ==========================*/
     #tit_cont3 {
-        font-size: 14px;
+        font-size: 1em; 
     }
     
-    #imagens_cont-3 {
-        flex-direction: column;
+    
+    #cont-3 #dec1 {
+        display: none;
     }
-
-    #cont-3 img {
-        width: 90vw;
-    }
-
-    #cont-3 #dec1, #dec2 {
+    
+    #cont-3 #dec2 {
         display: none;
     }
 
-    /* ============================= RESPONSIVIDADE CONTEUDO-4 =========================== */
-    #cont-4 {
+    .flex-card {
         padding: 50px 20px;
+    }
+
+    footer div:first-child {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer .flex-footer {
         flex-direction: column;
+    }
+
+    footer .flex-content {
+        flex-direction: column;
+    }
+
+    footer .footer-devs, .footer-links {
         text-align: center;
     }
 
-    #text_cont4 {
-        font-size: 20px;
+
+
+    .conteudo-cards {
+        padding: 50px 20px;
+    }
+   
+    .tit {
+        font-size: 3em;
+        text-align: center;
     }
 
     /* ============================= RESPONSIVIDADE TELA DE LOGING 
