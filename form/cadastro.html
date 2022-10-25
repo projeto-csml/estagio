@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- ### MY CSS ### -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- ### BOOTSTRAP CSS ### -->
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+    
+        <!-- ### ANIMATE CSS ### -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!-- ### ICONE DO SITE ### -->
+        <link rel="shortcut icon" href="../img/favicon.png">
+
+        <!-- ### TÍTULO DOCUMENTO ### -->
+        <title>Cadastre-se agora no Machine Learning!</title>
+    </head>
+</head>
+<body id="body_form">
+    <div class="main_form">
+        <div class="form-image">
+            <img src="../img/img_login.svg">
+        </div>
+
+        <div class="form">
+            <form class="row g-3" name="form" id="form" method="post" onsubmit="return envia(this)" action="../home.html">
+                <a class="btn btn-outline-primary col-md-2" href="../home.html">Voltar</a>
+                <h1>Dados Pessoais</h1>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu Nome Completo" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="inputEmail4" class="form-label">E-Mail</label>
+                  <input type="email" class="form-control" id="email" placeholder="rdreidelas@gmail.com" required>
+                </div>
+
+                <div class="col-md-6" style="position: relative;">
+                    <label for="inputPassword4" class="form-label">Senha</label>
+                    <input style="padding-right: 45px;" type="password" class="form-control" name="senha1" id="senha1" oninput="senhas()" placeholder="******" required>
+                    <img class="input-eye" id="senhaonoff" onclick="eyeClick(this)" src="../img/eye.svg">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Confirmar Senha</label>
+                    <input type="password" class="form-control" name="senha2" id="senha2" oninput="senhas()" placeholder="******" required>
+                </div>
+                
+                <p id="msg"><i>* As senhas não conferem</i> </p>
+                
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check" name="check">
+                        <label class="form-check-label" for="gridCheck">
+                            Concordo com os termos de privacidade
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="reset" class="btn btn-outline-primary">Limpar</button>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+                
+
+               <p>Já possui login? <a href="login.html">Entrar</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="../javascript/script.js"></script>
+</body>
+</html>

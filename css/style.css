@@ -65,34 +65,27 @@ a.activate:hover {
 
 nav li a:hover {color: white; border-bottom: 3px solid white;}
 
-#buttonEntrar {
-    color: white;
-    text-decoration: none;
-    border: white solid 1px;
-    border-radius: 3px;
-    padding: 5px 20px;
-    transition: all 0.3s ease;
-}
-#buttonEntrar:hover {background-color: white; color: rgb(31, 62, 102);}
-
-#buttonCadastrar {
-    color: white;
-    background-color: rgb(68, 124, 202);
-    text-decoration: none;
-    border: rgb(68, 124, 202) solid 1px;
-    border-radius: 2px;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
-}
-#buttonCadastrar:hover {background-color: rgb(49, 98, 161); border-color: rgb(49, 98, 161);}
-
 #btn-mobile {
     display: none;
 }
 
 #buttonAccount {
-    padding: 15px 0;
+    padding: 20px 0;
 }
+
+#msg {
+    font-size: .9em;
+    display: none;
+    color: rgb(153, 11, 11);
+}
+
+.input-eye {
+    width: 24px;
+    position: absolute;
+    right: 10%;
+    top: 52%;
+}
+
 
 /* ============================== INÍCIO ============================== */
 #main {
@@ -289,7 +282,7 @@ nav li a:hover {color: white; border-bottom: 3px solid white;}
 
 #cont-3 #dec1 {
     background-color: rgb(27, 35, 61);
-    width: 200px;
+    width: 15%;
     height: 100px;
     margin-top: -100px;
     left: 0;
@@ -298,7 +291,7 @@ nav li a:hover {color: white; border-bottom: 3px solid white;}
 
 #cont-3 #dec2 {
     background-color: rgb(27, 35, 61);
-    width: 200px;
+    width: 15%;
     height: 100px;
     margin-bottom: -100px;
     right: 0;
@@ -307,7 +300,7 @@ nav li a:hover {color: white; border-bottom: 3px solid white;}
 
 /* ========================= RODAPÉ ========================== */
 footer {
-    background-color: rgb(38, 43, 61);
+    background-color: rgb(9, 40, 78);
     width: 100%;
     height: auto;
     grid-area: f;
@@ -369,9 +362,10 @@ footer .flex-content {
 }
 
 footer .contato {
-    background-color: rgb(24, 24, 32);
+    background-color: #020d25;
     height: auto;
 }
+
 
 footer .contato p {
     color: white;
@@ -390,7 +384,11 @@ footer .contato p {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 50px 100px;
+    padding: 100px;
+}
+
+form a:hover {
+    color: rgb(27, 133, 233);
 }
 
 
@@ -559,17 +557,31 @@ footer .contato p {
     footer .footer-devs, .footer-links {
         text-align: center;
     }
+    
 
+    #body_form .main_form {
+        width: 100vw;
+        height: 70vh;
+    }
 
+    .main_form .form-image {
+        display: none;
+    }
+
+    .main_form .form {
+        width: 100%;
+        border-radius: 0;
+    }
 
     .conteudo-cards {
-        padding: 50px 20px;
+        padding: 100px 20px;
     }
    
     .tit {
         font-size: 3em;
         text-align: center;
     }
+
 
     /* ============================= RESPONSIVIDADE TELA DE LOGING 
     INCOMPLETO =========================== */
@@ -578,9 +590,6 @@ footer .contato p {
     /* SCROLLBAR */
     ::-webkit-scrollbar {width: 0;}
     ::-webkit-scrollbar-thumb {width: 0;}
-}
-
-@media (min-width: 1920px) {
 }
 
 /* ======================================================= TELA DE LOGIN ========================================================= */
